@@ -1,0 +1,14 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{greatjob}
+
+\RequirePackage{tikz}
+
+\usetikzlibrary{shapes}
+
+\newcommand{\greatjob}{\tikz[overlay, remember picture]{
+\path (current page.north) -- (current page.east)
+ node[midway, shape=star, star points = 5, star point ratio=2.25,  draw, fill=yellow] {Great job!};}}
+ 
+\newcommand{\jobjob}[1]{\tikz[overlay, remember picture]{
+\path (current page.north) -- (current page.east)
+ node[midway, shape=star, star points = 5, star point ratio=2.25,  draw, fill=yellow] {#1};}}
